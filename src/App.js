@@ -43,10 +43,14 @@ function App() {
     }
   ]
 
+  function deletarColaborador () {
+
+  }
+
   const [colaboradores, setColaboradores] = useState([])
 
   const aoNovoColaboradorAdicionado = (colaborador) => {
-    debugger
+    
     setColaboradores([...colaboradores, colaborador])
   }
 
@@ -61,6 +65,7 @@ function App() {
         corPrimaria={time.corPrimaria} 
         corSecundaria={time.corSecundaria} 
         colaboradores={colaboradores.filter(colaborador => colaborador.time === time.nome)}
+        aoDeletar={deletarColaborador}
       />)}   
 
     </div>
